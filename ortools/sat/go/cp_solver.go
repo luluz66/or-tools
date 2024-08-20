@@ -18,10 +18,10 @@ import (
 	"sync"
 	"unsafe"
 
-	"golang/protobuf/v2/proto/proto"
+	"google.golang.org/protobuf/proto"
 
-	cmpb "ortools/sat/cp_model_go_proto"
-	sppb "ortools/sat/sat_parameters_go_proto"
+	cmpb "ortools/sat/proto/cpmodel"
+	sppb "ortools/sat/proto/satparameters"
 )
 
 /*
@@ -179,6 +179,6 @@ func SolutionBooleanValue(r *cmpb.CpSolverResponse, bv BoolVar) bool {
 }
 
 // SolutionIntegerValue returns the value of LinearArgument `la` in the response.
-func SolutionIntegerValue(r *cmpb.CpSolverResponse, la LinearArgument) int64_t {
+func SolutionIntegerValue(r *cmpb.CpSolverResponse, la LinearArgument) int64 {
 	return la.evaluateSolutionValue(r)
 }
