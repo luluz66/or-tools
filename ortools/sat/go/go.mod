@@ -1,4 +1,4 @@
-module github.com/or-tools/ortools/sat/cpmodel
+module github.com/or-tools/ortools/sat
 
 go 1.22.2
 
