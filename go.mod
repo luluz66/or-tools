@@ -1,4 +1,4 @@
-module github.com/or-tools/ortools
+module github.com/google/or-tools
 
 go 1.22.2
 
