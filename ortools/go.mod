@@ -1,4 +1,4 @@
-module github.com/or-tools/ortools/sat
+module github.com/or-tools/ortools
 
 go 1.22.2
 

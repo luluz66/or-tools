@@ -30,7 +30,7 @@ import (
 
 	log "github.com/golang/glog"
 
-	cmpb "ortools/sat/proto/cpmodel"
+	cmpb "github.com/or-tools/ortools/sat/proto/cpmodel"
 )
 
 // ErrMixedModels holds the error when elements added to a model are different.

@@ -20,8 +20,8 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	cmpb "ortools/sat/proto/cpmodel"
-	sppb "ortools/sat/proto/satparameters"
+	cmpb "github.com/or-tools/ortools/sat/proto/cpmodel"
+	sppb "github.com/or-tools/ortools/sat/proto/satparameters"
 )
 
 /*
