@@ -17,6 +17,7 @@ load("@rules_cc//cc:defs.bzl", "cc_library", "cc_proto_library")
 load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
 load("@rules_java//java:defs.bzl", "java_proto_library")
 load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@rules_python//python:proto.bzl", "py_proto_library")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -67,6 +68,11 @@ go_proto_library(
 	importpath = "github.com/google/or-tools/ortools/sat/proto/satparameters"
 )
 
+py_proto_library(
+    name = "sat_parameters_py_pb2",
+    deps = [":sat_parameters_proto"],
+)
+
 java_proto_library(
     name = "sat_parameters_java_proto",
     deps = [":sat_parameters_proto"],
@@ -86,6 +92,11 @@ go_proto_library(
     name = "cp_model_go_proto",
 	importpath = "github.com/google/or-tools/ortools/sat/proto/cpmodel",
     proto = ":cp_model_proto",
+)
+
+py_proto_library(
+    name = "cp_model_py_pb2",
+    deps = [":cp_model_proto"],
 )
 
 java_proto_library(
