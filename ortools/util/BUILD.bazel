@@ -12,6 +12,7 @@
 # limitations under the License.
 
 load("@rules_cc//cc:defs.bzl", "cc_proto_library")
+load("@rules_python//python:proto.bzl", "py_proto_library")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -316,6 +317,11 @@ cc_proto_library(
     deps = [":int128_proto"],
 )
 
+py_proto_library(
+    name = "int128_py_pb2",
+    deps = [":int128_proto"],
+)
+
 # OptionalBoolean
 proto_library(
     name = "optional_boolean_proto",
@@ -324,6 +330,11 @@ proto_library(
 
 cc_proto_library(
     name = "optional_boolean_cc_proto",
+    deps = [":optional_boolean_proto"],
+)
+
+py_proto_library(
+    name = "optional_boolean_py_pb2",
     deps = [":optional_boolean_proto"],
 )
 
