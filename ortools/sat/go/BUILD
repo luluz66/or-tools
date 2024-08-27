@@ -1,6 +1,6 @@
 # Prefer generated BUILD files to be called BUILD over BUILD.bazel
 # gazelle:build_file_name BUILD,BUILD.bazel
-# gazelle:prefix github.com/or-tools/ortools/sat
+# gazelle:prefix github.com/or-tools/ortools/sat/go
 load("@bazel_gazelle//:def.bzl", "gazelle")
 load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
