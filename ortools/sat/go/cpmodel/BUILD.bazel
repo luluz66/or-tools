@@ -5,18 +5,20 @@ go_library(
     srcs = [
         "cp_model.go",
         "cp_solver.go",
+        "cp_solver_c.cc",
+        "cp_solver_c.h",
         "domain.go",
     ],
     cdeps = [":cp_solver_c"],
     cgo = True,
-    importpath = "github.com/google/or-tools/ortools/sat/go/cpmodel",
+    importpath = "github.com/or-tools/ortools/ortools/sat/go/cpmodel",
     visibility = ["//visibility:public"],
     deps = [
-	"@com_github_golang_glog//:glog",
-	"//ortools/sat:cp_model_go_proto",
-	"//ortools/sat:sat_parameters_go_proto",
-     "@org_golang_google_protobuf//proto",
-	],
+        "//ortools/sat:cp_model_go_proto",
+        "//ortools/sat:sat_parameters_go_proto",
+        "@com_github_golang_glog//:glog",
+        "@org_golang_google_protobuf//proto",
+    ],
 )
 
 go_test(
