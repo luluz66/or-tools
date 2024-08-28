@@ -9,7 +9,7 @@ go_library(
     ],
     cdeps = [":cp_solver_c"],
     cgo = True,
-    importpath = "github.com/google/or-tools/ortools/sat/cpmodel",
+    importpath = "github.com/google/or-tools/ortools/sat/go/cpmodel",
     visibility = ["//visibility:public"],
     deps = [
 	"@com_github_golang_glog//:glog",
