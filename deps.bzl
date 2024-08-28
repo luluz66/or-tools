@@ -21,12 +21,12 @@ def go_dependencies():
     )
     go_repository(
         name = "org_golang_google_protobuf",
+        build_directives = [
+            "gazelle:proto disable",  # https://github.com/bazelbuild/rules_go/issues/3906
+        ],
         importpath = "google.golang.org/protobuf",
         sum = "h1:6xV6lTsCfpGD21XK49h7MhtcApnLqkfYgPcdHftf6hg=",
         version = "v1.34.2",
-		build_directives = [
-            "gazelle:proto disable",  # https://github.com/bazelbuild/rules_go/issues/3906
-        ],
     )
     go_repository(
         name = "org_golang_x_xerrors",

@@ -29,7 +29,13 @@ go_test(
         "domain_test.go",
     ],
     embed = [":cpmodel"],
-    deps = ["@com_github_golang_glog//:glog"],
+    deps = [
+        "//ortools/sat:cp_model_go_proto",
+        "@com_github_golang_glog//:glog",
+        "@com_github_google_go_cmp//cmp",
+        "@org_golang_google_protobuf//proto",
+        "@org_golang_google_protobuf//testing/protocmp",
+    ],
 )
 
 cc_library(
